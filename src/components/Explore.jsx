@@ -2,7 +2,7 @@ import React from "react";
 
 const Explore = () => {
     return (
-        <section id ="Explore">
+        <section id ="explore">
             <div className="container">
                 <div className="row row__column">
                     <h2>
