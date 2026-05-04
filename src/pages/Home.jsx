@@ -5,6 +5,7 @@ import Featured from "../components/Featured";
 import Discounted from "../components/Discounted";
 import Explore from "../components/Explore";
 
+
 const Home = () => {
     return (
      <>
