@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Book.jsx";
+
 import { Link } from "react-router-dom";
 import Price from "./Price.jsx";
 import Rating from "./Rating.jsx";
@@ -18,9 +18,9 @@ const Book = ({book}) => {
         image.src = book.url;
         image.onload = () => {
             setTimeout(() => {
-                // if (mountedRef.current) {
-                setImg(image);
-               
+                if (mountedRef.current) {
+                    setImg(image);
+                }
             }, 300);    
         };
 
@@ -28,7 +28,7 @@ const Book = ({book}) => {
             // when the component unmounts
             mountedRef.current = false;
         }
-    });
+    }, [book.url]);
    
   return (
    <div className="book">

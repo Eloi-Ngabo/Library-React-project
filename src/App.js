@@ -53,7 +53,7 @@ function numberOfItems() {
     <Router>
     <div className="App">
       <Nav numberOfItems={numberOfItems()}/>
-       <Route path="/" exact component = {Home} />
+       <Route path="/" exact render={() => <Home books={books} />} />
       <Route path="/books" exact render={() => <Books books={books} />} />
       <Route path="/books/:id" render={() => (<BookInfo books={books} addToCart={addToCart}  cart={cart}/>)} /> 
       <Route path="/cart"  render={() => (<Cart books={books}  cart={cart} changeQuantity={changeQuantity} 
